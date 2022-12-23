@@ -1,0 +1,70 @@
+{
+  "name": "rnhooksjavascript",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prettier": "prettier --ignore-path .gitignore \"src/**/*.+(js|jsx|json)\"",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "start": "react-native start",
+    "start-reset": "react-native start --reset-cache",
+    "pod": "npx pod-install ios",
+    "ios": "react-native run-ios --simulator='iPhone 14 Pro'",
+    "android": "react-native run-android",
+    "android-clean": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease && cd ..",
+    "android-build-debug": "cd android && ./gradlew assembleDebug && cd ..",
+    "android-build-release": "cd android && ./gradlew assembleRelease && cd .."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.11",
+    "@react-navigation/bottom-tabs": "^6.5.2",
+    "@react-navigation/native": "^6.1.1",
+    "@react-navigation/native-stack": "^6.9.7",
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.1",
+    "prop-types": "^15.8.1",
+    "react": "18.1.0",
+    "react-native": "0.70.6",
+    "react-native-encrypted-storage": "^4.0.3",
+    "react-native-localization": "^2.3.1",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.2",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-module-resolver": "^1.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "0.72.3",
+    "prettier": "^2.8.1",
+    "react-test-renderer": "18.1.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
